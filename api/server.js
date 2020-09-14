@@ -30,6 +30,12 @@ server.use(
 server.use('/api/auth', authRouter);
 server.use('/api/jokes', jokesRouter);
 
+server.get("/", (req, res) => {
+	res.json({
+		message: "Welcome to our API",
+	})
+})
+
 server.use((err, req, res, next) => {
     console.log(err)
     res.status(500).json({
