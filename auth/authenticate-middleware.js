@@ -15,4 +15,6 @@ function authenticate() {
   }
 }
 
-module.exports = authenticate
+module.exports = {
+  authenticate
+}
